@@ -1,0 +1,16 @@
+#!/bin/bash
+
+chars=( {a..z} {A..Z} {0..9} )
+
+function rand_string {
+    local c=$1 ret=
+    while((c--)); do
+        ret+=${chars[$((RANDOM%${#chars[@]}))]}
+    done
+    printf '%s\n' "$ret"
+}
+
+for file in ~/Downloads/webvm/cli-training/logs/*
+do
+    mv "$file" ~/Downloads/webvm/cli-training/logs/log_"$(rand_string 3)"_"$(rand_string 9)".txt
+done
