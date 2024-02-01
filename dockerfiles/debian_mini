@@ -5,7 +5,7 @@ RUN apt-get -y install apt-utils gcc \
 	python3 vim unzip \ 
 	fakeroot dbus base whiptail hexedit \
 	patch wamerican ucf manpages \
-	file make dialog curl nano sudo \
+	file make dialog curl grep nano sudo \
 	less cowsay netcat-openbsd man-db \
 	coreutils wget util-linux gawk jq iputils-ping
 RUN useradd -m user && echo "user:password" | chpasswd
