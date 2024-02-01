@@ -12,6 +12,7 @@ RUN useradd -m user && echo "user:password" | chpasswd
 COPY --chown=1000:1000 ./cli-training /home/user/cli-training
 # We set WORKDIR, as this gets extracted by Webvm to be used as the cwd. This is optional.
 WORKDIR /home/user/
+RUN chown user:user /home/user/cli-training/run_me.sh
 # We set env, as this gets extracted by Webvm. This is optional.
 ENV HOME="/home/user" TERM="xterm" USER="user" SHELL="/bin/bash" EDITOR="vim" LANG="en_US.UTF-8" LC_ALL="C" PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
 RUN echo 'root:MY VoICe is mY PasSWorD' | chpasswd
