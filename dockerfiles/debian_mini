@@ -9,7 +9,9 @@ RUN apt-get -y install apt-utils gcc \
 	less cowsay netcat-openbsd man-db \
 	coreutils wget util-linux gawk jq iputils-ping
 RUN useradd -m user && echo "user:password" | chpasswd
-COPY --chown=user:user ./cli-training /home/user/cli-training
+RUN mkdir -p /home/user/cli-training \
+    && chown -R user:user /home/user/cli-training
+COPY --chown=user:user ./cli-training/ /home/user/cli-training/
 # We set WORKDIR, as this gets extracted by Webvm to be used as the cwd. This is optional.
 WORKDIR /home/user/
 # We set env, as this gets extracted by Webvm. This is optional.
