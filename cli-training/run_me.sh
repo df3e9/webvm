@@ -1,3 +1,3 @@
 #!/bin/sh
 
-echo "Q29uZ3JhdHMhIFlvdSBzdWNjZXNzZnVsbHkgcmFuIGEgYmFzaCBzY3JpcHQh=" | base64 -d
+echo "Q29uZ3JhdHMhIFlvdSBzdWNjZXNzZnVsbHkgcmFuIHRoZSBydW5fbWUgYmFzaCBzY3JpcHQhCg==" | base64 -d
