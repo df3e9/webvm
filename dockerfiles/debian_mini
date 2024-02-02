@@ -4,7 +4,7 @@ RUN apt-get clean && apt-get update && apt-get -y upgrade
 RUN apt-get -y install apt-utils gcc \
 	python3 vim unzip \ 
 	fakeroot dbus base whiptail hexedit \
-	patch wamerican ucf manpages uniq\
+	patch wamerican ucf manpages \
 	file make dialog curl grep nano sudo \
 	less cowsay netcat-openbsd man-db \
 	coreutils wget util-linux gawk jq iputils-ping
